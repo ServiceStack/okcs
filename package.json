@@ -1,7 +1,7 @@
 {
   "name": "okcs",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "bin": "./dist/okcs.js",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -37,8 +37,7 @@
     "url": "git+https://github.com/ServiceStack/okcs"
   },
   "bugs": "https://forums.servicestack.net",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/bun": "^1.1.14",
     "@types/node": "^22.10.1",
