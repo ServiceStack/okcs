@@ -1,0 +1,48 @@
+{
+  "name": "okcs",
+  "type": "module",
+  "version": "0.0.0",
+  "bin": "./dist/okcs.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "description": "",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bun run clean && tsc",
+    "clean": "shx rm -rf ./dist",
+    "test": "bun test --",
+    "prepublishOnly": "bun run build",
+    "release": "bun run clean && bun run build && bump patch --commit --push --tag && npm publish --access public"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "servicestack",
+    "api",
+    "crud",
+    "generator"
+  ],
+  "homepage": "https://servicestack.net",
+  "author": "ServiceStack, Inc. (https://servicestack.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServiceStack/okcs"
+  },
+  "bugs": "https://forums.servicestack.net",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.1",
+    "bun-plugin-dts": "^0.3.0",
+    "typescript": "^5.7.2"
+  }
+}
